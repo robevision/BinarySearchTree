@@ -44,21 +44,40 @@ namespace BinaryTree
             }
             node.link = temp;
         }
-        public void Add(int data)
+            public void Add(int data)
         {
-            Node temp = new Node(data);
             if(root == null)
             {
                 InsertInBeginning(data);
             }
-            else if (data < root.data)
+            if(temp.left!= null)
             {
-                temp = temp.right;
+                if (data < root.data)
+                {
+                    temp = temp.left;
+                }
+                if (data >= root.data)
+                {
+                    temp = temp.right;
+                }
             }
-            else if (data < root.data)
+            if (temp.right != null)
             {
-                temp = temp.left;
+                if (data < root.data)
+                {
+                    temp = temp.left;
+                }
+                else if (data >= root.data)
+                {
+                    temp = temp.right;
+                }
+                else
+                {
+                 
+                }
             }
+            Add(data);
+            
         }
       
         //wrap around array
