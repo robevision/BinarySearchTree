@@ -10,6 +10,10 @@ namespace BinaryTree
     {
         static void Main(string[] args)
         {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(85);
+            binaryTree.Add(74);
+            binaryTree.Add(36);
 
         }
     }

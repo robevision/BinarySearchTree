@@ -49,16 +49,19 @@ namespace BinaryTree
             if(root == null)
             {
                 InsertInBeginning(data);
+                return;
             }
             if(temp.left!= null)
             {
                 if (data < root.data)
                 {
                     temp = temp.left;
+                    return;
                 }
                 if (data >= root.data)
                 {
                     temp = temp.right;
+                    return;
                 }
             }
             if (temp.right != null)

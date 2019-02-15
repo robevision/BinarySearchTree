@@ -1,0 +1,7 @@
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\bin\Debug\BinaryTree.exe.config
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\bin\Debug\BinaryTree.exe
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\bin\Debug\BinaryTree.pdb
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\obj\Debug\BinaryTree.csprojAssemblyReference.cache
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\obj\Debug\BinaryTree.csproj.CoreCompileInputs.cache
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\obj\Debug\BinaryTree.exe
+C:\Users\theri\Documents\DCC_Proj\Exercises\BinaryTree-Assign\BinarySearchTree\BinaryTree\obj\Debug\BinaryTree.pdb
