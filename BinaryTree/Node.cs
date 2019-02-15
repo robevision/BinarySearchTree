@@ -9,8 +9,8 @@ namespace BinaryTree
     public class Node
     {
         public int data;
-        Node left;
-        Node right;
+        public Node left;
+        public Node right;
         public Node link;
         public Node(int data)
         {
@@ -19,12 +19,17 @@ namespace BinaryTree
             left = null;
             right = null;
         }
-        public void GetDirection()
+        public void Traverse()
         {
-            if(data < link)
+            if (left != null)
             {
-
+                left.Traverse();
+            }
+            if (right != null)
+            {
+                right.Traverse();
             }
         }
+
     }
 }
