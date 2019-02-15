@@ -19,5 +19,12 @@ namespace BinaryTree
             left = null;
             right = null;
         }
+        public void GetDirection()
+        {
+            if(data < link)
+            {
+
+            }
+        }
     }
 }

@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-    class CreateTree
+    class BinaryTree
     {
         Node root;
-        public  CreateTree()
+        
+        public void CreateTree()
         {
             root = new Node(4);
         }
-    
+        public void LinkToRoot(int data)
+        {
+            Node temp = new Node(data);
+            temp.link = start;
+            start = temp;
+        }
         //wrap around array
     }
 }
