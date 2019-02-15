@@ -8,12 +8,11 @@ namespace BinaryTree
 {
     class BinaryTree
     {
-        Node root;
-        private Node temp;
+        private Node root;
         public BinaryTree()
         {
             root = null;
-            
+               
         }
         //public void CreateTree()
         //{
@@ -22,67 +21,144 @@ namespace BinaryTree
         //    if
         //    root = new Node(data);
         //}
-        public void InsertInBeginning(int data)
+        //public void InsertInBeginning(int data)
+        //{
+        //    Node temp = new Node(data);
+        //    temp = root;
+        //    root = temp;
+        //}
+        //public void InsertForLeft(int data)
+        //{
+        //    root.temp = root;
+        //    Node temp = new Node(data);
+        //    temp.link = root;
+
+        //    //get Object exception here!!!
+        //    root.left = temp;
+        //}
+        //public void InsertForRight(int data)
+        //{
+        //    Node temp = new Node(data);
+        //    root = temp.link;
+        //    temp.link = root;
+        //    root.right = temp;
+        //}
+        //public void InsertAtEnd(int data)
+        //{
+        //    Node temp = new Node(data);
+
+        //    if (root == null)
+        //    {
+        //        root = temp;
+        //        return;
+        //    }
+        //    //node = root;
+        //    //while(node.link != null)
+        //    //{
+        //    //    node = node.link;
+        //    //}
+        //    //node.link = temp;
+        //}
+            public void Add(int data)    
         {
             Node temp = new Node(data);
-            temp.link = root;
-            root = temp;
-        }
-        public void InsertAtEnd(int data)
-        {
-            Node node;
-            Node temp = new Node(data);
-            if(root == null)
+
+            if (root == null)
             {
                 root = temp;
+                //InsertInBeginning(data);
                 return;
             }
-            node = root;
-            while(node.link != null)
+            while (root != null)
             {
-                node = node.link;
-            }
-            node.link = temp;
-        }
-            public void Add(int data)
-        {
-            if(root == null)
-            {
-                InsertInBeginning(data);
-                return;
-            }
-            if(temp.left!= null)
-            {
+               
                 if (data < root.data)
                 {
-                    temp = temp.left;
-                    return;
+                    Node node = root.left;
+
+                    if (node != null)
+                    {
+                        node.left = temp;
+                        return;
+                    }
+                    else
+                    {
+                        root.left = temp;
+                        
+                        return;
+                    }
                 }
                 if (data >= root.data)
                 {
-                    temp = temp.right;
-                    return;
+                    Node node = root.right;
+                    if (node != null)
+                    {
+
+                        node.right = temp;
+                        return;
+                      
+                    }
+                    else
+                    {
+                        root.right = temp;
+                        
+                        return;
+                    }
                 }
             }
-            if (temp.right != null)
-            {
-                if (data < root.data)
-                {
-                    temp = temp.left;
-                }
-                else if (data >= root.data)
-                {
-                    temp = temp.right;
-                }
-                else
-                {
-                 
-                }
-            }
-            Add(data);
             
         }
-      
+        public void Search(int data)
+        {
+            Node temp = new Node(data);
+
+            if (root == null)
+            {
+                root = temp;
+               
+                return;
+            }
+            while (root != null)
+            {
+
+                if (data < root.data)
+                {
+                    Node node = root.left;
+
+                    if (node != null)
+                    {
+                        node.left = temp;
+                        return;
+                    }
+                    else
+                    {
+                        root.left = temp;
+
+                        return;
+                    }
+                }
+                if (data >= root.data)
+                {
+                    Node node = root.right;
+                    if (node != null)
+                    {
+
+                        node.right = temp;
+                        return;
+
+                    }
+                    else
+                    {
+                        root.right = temp;
+
+                        return;
+                    }
+                }
+            }
+
+        }
+
+
         //wrap around array
     }
 }

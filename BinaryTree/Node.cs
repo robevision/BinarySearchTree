@@ -11,11 +11,9 @@ namespace BinaryTree
         public int data;
         public Node left;
         public Node right;
-        public Node link;
         public Node(int data)
         {
             this.data = data;
-            link = null;
             left = null;
             right = null;
         }
