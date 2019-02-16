@@ -17,17 +17,7 @@ namespace BinaryTree
             left = null;
             right = null;
         }
-        public void Traverse()
-        {
-            if (left != null)
-            {
-                left.Traverse();
-            }
-            if (right != null)
-            {
-                right.Traverse();
-            }
-        }
+      
 
     }
 }

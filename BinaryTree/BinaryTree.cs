@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BinaryTree
@@ -12,144 +13,115 @@ namespace BinaryTree
         public BinaryTree()
         {
             root = null;
-               
+
         }
-        //public void CreateTree()
-        //{
-        //    //get user input for adding to root node
-        //    int data = int.Parse(Console.ReadLine());
-        //    if
-        //    root = new Node(data);
-        //}
-        //public void InsertInBeginning(int data)
-        //{
-        //    Node temp = new Node(data);
-        //    temp = root;
-        //    root = temp;
-        //}
-        //public void InsertForLeft(int data)
-        //{
-        //    root.temp = root;
-        //    Node temp = new Node(data);
-        //    temp.link = root;
 
-        //    //get Object exception here!!!
-        //    root.left = temp;
-        //}
-        //public void InsertForRight(int data)
-        //{
-        //    Node temp = new Node(data);
-        //    root = temp.link;
-        //    temp.link = root;
-        //    root.right = temp;
-        //}
-        //public void InsertAtEnd(int data)
-        //{
-        //    Node temp = new Node(data);
-
-        //    if (root == null)
-        //    {
-        //        root = temp;
-        //        return;
-        //    }
-        //    //node = root;
-        //    //while(node.link != null)
-        //    //{
-        //    //    node = node.link;
-        //    //}
-        //    //node.link = temp;
-        //}
-            public void Add(int data)    
+        public void Add(int data)
         {
+            Node node;
             Node temp = new Node(data);
 
             if (root == null)
             {
                 root = temp;
-                //InsertInBeginning(data);
                 return;
             }
-            while (root != null)
+            node = root;
+            while (node != null)
             {
-               
-                if (data < root.data)
-                {
-                    Node node = root.left;
 
-                    if (node != null)
+                if (temp.data < node.data)
+                {
+                    //node = node.left;
+
+                    if (node.left != null)
                     {
-                        node.left = temp;
-                        return;
+                        node = node.left;
+
                     }
                     else
                     {
-                        root.left = temp;
-                        
+                        node.left = temp;
+
                         return;
                     }
                 }
-                if (data >= root.data)
+                if (temp.data >= node.data)
                 {
-                    Node node = root.right;
-                    if (node != null)
+
+                    if (node.right != null)
                     {
 
-                        node.right = temp;
-                        return;
-                      
+                        node = node.right;
+
+
                     }
                     else
                     {
-                        root.right = temp;
-                        
+                        node.right = temp;
+
                         return;
                     }
                 }
             }
-            
+
         }
+
         public void Search(int data)
         {
+            Node node;
             Node temp = new Node(data);
 
             if (root == null)
             {
+                Console.WriteLine(root);
+                Thread.Sleep(2000);
                 root = temp;
-               
                 return;
             }
-            while (root != null)
+            node = root;
+            while (node != null)
             {
 
-                if (data < root.data)
+                if (temp.data < node.data)
                 {
-                    Node node = root.left;
-
-                    if (node != null)
+                    if(temp.data == node.data)
                     {
-                        node.left = temp;
-                        return;
+                        Console.WriteLine(node.data);
+                        Thread.Sleep(2000);
+                    }
+                    //node = node.left;
+
+                    if (node.left != null)
+                    {
+                        node = node.left;
+
                     }
                     else
                     {
-                        root.left = temp;
+                        node.left = temp;
 
                         return;
                     }
                 }
-                if (data >= root.data)
+                if (temp.data >= node.data)
                 {
-                    Node node = root.right;
-                    if (node != null)
+                    if(temp.data == node.data)
+                    {
+                        Console.WriteLine(node.data);
+                        Thread.Sleep(2000);
+                    }
+
+                    if (node.right != null)
                     {
 
-                        node.right = temp;
-                        return;
+                        node = node.right;
+
 
                     }
                     else
                     {
-                        root.right = temp;
+                        node.right = temp;
 
                         return;
                     }
@@ -158,7 +130,7 @@ namespace BinaryTree
 
         }
 
-
-        //wrap around array
     }
-}
+        //    //wrap around array
+        //}
+    }
